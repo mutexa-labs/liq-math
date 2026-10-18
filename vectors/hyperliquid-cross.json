@@ -1,0 +1,252 @@
+{
+  "schema": 1,
+  "venue": "hyperliquid",
+  "model": "cross",
+  "recordedWith": "scripts/record-hyperliquid.ts",
+  "description": "Accounts whose only open cross position is this one and that hold no spot balances. markPx = positionValue / |szi|.",
+  "cases": [
+    {
+      "id": "hl-cross-0001",
+      "recordedAt": "2026-10-18T22:15:47.524Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState",
+          "spotClearinghouseState"
+        ]
+      },
+      "coin": "ETH",
+      "input": {
+        "szi": "10459.0373",
+        "positionValue": "24946895.7679600008",
+        "crossAccountValue": "9728075.1167709995",
+        "crossMaintenanceMarginUsed": "498937.915359",
+        "maxLeverage": 25,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 25
+          },
+          {
+            "lowerBound": "100000000.0",
+            "maxLeverage": 15
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "1484.7837695104"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-cross-0002",
+      "recordedAt": "2026-10-18T22:15:47.792Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState",
+          "spotClearinghouseState"
+        ]
+      },
+      "coin": "ETH",
+      "input": {
+        "szi": "57.7",
+        "positionValue": "137626.04",
+        "crossAccountValue": "26012.383725",
+        "crossMaintenanceMarginUsed": "2752.5208",
+        "maxLeverage": 25,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 25
+          },
+          {
+            "lowerBound": "100000000.0",
+            "maxLeverage": 15
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "1973.8559097903"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-cross-0003",
+      "recordedAt": "2026-10-18T22:15:52.145Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState",
+          "spotClearinghouseState"
+        ]
+      },
+      "coin": "ZEC",
+      "input": {
+        "szi": "-2.27",
+        "positionValue": "2494.73",
+        "crossAccountValue": "1904.221619",
+        "crossMaintenanceMarginUsed": "124.7365",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "1845.5849041326"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-cross-0004",
+      "recordedAt": "2026-10-18T22:15:53.353Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState",
+          "spotClearinghouseState"
+        ]
+      },
+      "coin": "SOL",
+      "input": {
+        "szi": "133.72",
+        "positionValue": "13777.1716",
+        "crossAccountValue": "5278.235425",
+        "crossMaintenanceMarginUsed": "344.42929",
+        "maxLeverage": 20,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 20
+          },
+          {
+            "lowerBound": "70000000.0",
+            "maxLeverage": 10
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "65.1873886882"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-cross-0005",
+      "recordedAt": "2026-10-18T22:15:56.758Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState",
+          "spotClearinghouseState"
+        ]
+      },
+      "coin": "XRP",
+      "input": {
+        "szi": "-18698.0",
+        "positionValue": "24101.553718",
+        "crossAccountValue": "22280.849343",
+        "crossMaintenanceMarginUsed": "602.538842",
+        "maxLeverage": 20,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 20
+          },
+          {
+            "lowerBound": "40000000.0",
+            "maxLeverage": 10
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "2.4201050881"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-cross-0006",
+      "recordedAt": "2026-10-18T22:15:57.025Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState",
+          "spotClearinghouseState"
+        ]
+      },
+      "coin": "XRP",
+      "input": {
+        "szi": "-22696.0",
+        "positionValue": "29254.939736",
+        "crossAccountValue": "11093.747393",
+        "crossMaintenanceMarginUsed": "731.373493",
+        "maxLeverage": 20,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 20
+          },
+          {
+            "lowerBound": "40000000.0",
+            "maxLeverage": 10
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "1.7344277762"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-cross-0007",
+      "recordedAt": "2026-10-18T22:16:10.048Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState",
+          "spotClearinghouseState"
+        ]
+      },
+      "coin": "PENGU",
+      "input": {
+        "szi": "-2.0",
+        "positionValue": "0.014714",
+        "crossAccountValue": "74225.219881",
+        "crossMaintenanceMarginUsed": "0.001471",
+        "maxLeverage": 5,
+        "marginTable": null
+      },
+      "expected": {
+        "liquidationPx": "33738.7429977273"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    }
+  ]
+}

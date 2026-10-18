@@ -1,0 +1,795 @@
+{
+  "schema": 1,
+  "venue": "hyperliquid",
+  "model": "isolated",
+  "recordedWith": "scripts/record-hyperliquid.ts",
+  "description": "Open isolated positions read from clearinghouseState, with the margin table from metaAndAssetCtxs of the same run. markPx = positionValue / |szi|.",
+  "cases": [
+    {
+      "id": "hl-iso-0001",
+      "recordedAt": "2026-10-18T22:15:45.762Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "MEGA",
+      "input": {
+        "szi": "65499.0",
+        "positionValue": "2813.83704",
+        "marginUsed": "1397.779267",
+        "entryPx": "0.043211",
+        "maxLeverage": 3,
+        "marginTable": null
+      },
+      "expected": {
+        "liquidationPx": "0.0259434393"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0002",
+      "recordedAt": "2026-10-18T22:15:46.909Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "BTC",
+      "input": {
+        "szi": "0.00282",
+        "positionValue": "229.79898",
+        "marginUsed": "22.767544",
+        "entryPx": "81559.6",
+        "maxLeverage": 40,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 40
+          },
+          {
+            "lowerBound": "150000000.0",
+            "maxLeverage": 20
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "74344.7117335488"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0003",
+      "recordedAt": "2026-10-18T22:15:49.198Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "LIT",
+      "input": {
+        "szi": "14370.0",
+        "positionValue": "42533.31753",
+        "marginUsed": "21815.238041",
+        "entryPx": "2.884375",
+        "maxLeverage": 5,
+        "marginTable": null
+      },
+      "expected": {
+        "liquidationPx": "1.60195465"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0004",
+      "recordedAt": "2026-10-18T22:15:49.408Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "BTC",
+      "input": {
+        "szi": "0.03356",
+        "positionValue": "2734.8044",
+        "marginUsed": "390.154579",
+        "entryPx": "81385.0",
+        "maxLeverage": 40,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 40
+          },
+          {
+            "lowerBound": "150000000.0",
+            "maxLeverage": 20
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "70748.7763009007"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0005",
+      "recordedAt": "2026-10-18T22:15:49.408Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "HYPE",
+      "input": {
+        "szi": "19.85",
+        "positionValue": "1544.15135",
+        "marginUsed": "159.203365",
+        "entryPx": "77.4714",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "73.4428203633"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0006",
+      "recordedAt": "2026-10-18T22:15:49.665Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "CASHCAT",
+      "input": {
+        "szi": "-6851086.0",
+        "positionValue": "712101.87884",
+        "marginUsed": "788376.729503",
+        "entryPx": "0.109381",
+        "maxLeverage": 3,
+        "marginTable": null
+      },
+      "expected": {
+        "liquidationPx": "0.1877256425"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0007",
+      "recordedAt": "2026-10-18T22:15:50.538Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "CASHCAT",
+      "input": {
+        "szi": "-3587.0",
+        "positionValue": "372.83278",
+        "marginUsed": "126.936337",
+        "entryPx": "0.104455",
+        "maxLeverage": 3,
+        "marginTable": null
+      },
+      "expected": {
+        "liquidationPx": "0.1194238999"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0008",
+      "recordedAt": "2026-10-18T22:15:51.674Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "ETH",
+      "input": {
+        "szi": "23.2017",
+        "positionValue": "55322.13348",
+        "marginUsed": "4064.641478",
+        "entryPx": "2365.93",
+        "maxLeverage": 25,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 25
+          },
+          {
+            "lowerBound": "100000000.0",
+            "maxLeverage": 15
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "2254.2987482532"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0009",
+      "recordedAt": "2026-10-18T22:15:51.674Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "SOL",
+      "input": {
+        "szi": "45.67",
+        "positionValue": "4705.8368",
+        "marginUsed": "737.985472",
+        "entryPx": "104.18",
+        "maxLeverage": 20,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 20
+          },
+          {
+            "lowerBound": "70000000.0",
+            "maxLeverage": 10
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "89.1086294206"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0010",
+      "recordedAt": "2026-10-18T22:15:51.674Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "ZEC",
+      "input": {
+        "szi": "4.99",
+        "positionValue": "5484.01",
+        "marginUsed": "550.669275",
+        "entryPx": "1097.9993",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "1040.6794061808"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0011",
+      "recordedAt": "2026-10-18T22:15:51.674Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "MON",
+      "input": {
+        "szi": "370876.0",
+        "positionValue": "7769.110448",
+        "marginUsed": "1943.739606",
+        "entryPx": "0.020945",
+        "maxLeverage": 5,
+        "marginTable": null
+      },
+      "expected": {
+        "liquidationPx": "0.0174522867"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0012",
+      "recordedAt": "2026-10-18T22:15:51.808Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "PUMP",
+      "input": {
+        "szi": "322936.0",
+        "positionValue": "1305.630248",
+        "marginUsed": "186.807729",
+        "entryPx": "0.004326",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "0.0036468771"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0013",
+      "recordedAt": "2026-10-18T22:15:51.808Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "ZEC",
+      "input": {
+        "szi": "1.81",
+        "positionValue": "1989.19",
+        "marginUsed": "222.461704",
+        "entryPx": "1137.1071",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "1027.4662960163"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0014",
+      "recordedAt": "2026-10-18T22:15:52.883Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "PUMP",
+      "input": {
+        "szi": "243435.0",
+        "positionValue": "984.207705",
+        "marginUsed": "99.25718",
+        "entryPx": "0.004046",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "0.0038265938"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0015",
+      "recordedAt": "2026-10-18T22:15:52.955Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "SOL",
+      "input": {
+        "szi": "-10860.58",
+        "positionValue": "1118965.5574",
+        "marginUsed": "179159.908428",
+        "entryPx": "115.9981",
+        "maxLeverage": 20,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 20
+          },
+          {
+            "lowerBound": "70000000.0",
+            "maxLeverage": 10
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "116.6110713333"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0016",
+      "recordedAt": "2026-10-18T22:15:53.954Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "AVAX",
+      "input": {
+        "szi": "15.57",
+        "positionValue": "149.377023",
+        "marginUsed": "15.246343",
+        "entryPx": "9.5764",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "9.0680918095"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0017",
+      "recordedAt": "2026-10-18T22:15:53.954Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "BNB",
+      "input": {
+        "szi": "-4.794",
+        "positionValue": "3434.901",
+        "marginUsed": "326.99614",
+        "entryPx": "713.293",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "3000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "747.3423406242"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0018",
+      "recordedAt": "2026-10-18T22:15:53.954Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "LTC",
+      "input": {
+        "szi": "95.68",
+        "positionValue": "5580.44032",
+        "marginUsed": "611.703894",
+        "entryPx": "57.7049",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "54.663972298"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0019",
+      "recordedAt": "2026-10-18T22:15:53.954Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "ARB",
+      "input": {
+        "szi": "-7622.6",
+        "positionValue": "1389.523754",
+        "marginUsed": "142.209826",
+        "entryPx": "0.18261",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "3000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "0.1913774678"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0020",
+      "recordedAt": "2026-10-18T22:15:53.954Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "DOGE",
+      "input": {
+        "szi": "14830.0",
+        "positionValue": "1165.638",
+        "marginUsed": "116.307666",
+        "entryPx": "0.07866",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "0.0744813383"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0021",
+      "recordedAt": "2026-10-18T22:15:53.954Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "INJ",
+      "input": {
+        "szi": "355.9",
+        "positionValue": "2889.44533",
+        "marginUsed": "579.175536",
+        "entryPx": "8.15394",
+        "maxLeverage": 5,
+        "marginTable": null
+      },
+      "expected": {
+        "liquidationPx": "7.2126058943"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0022",
+      "recordedAt": "2026-10-18T22:15:53.954Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "SUI",
+      "input": {
+        "szi": "8392.2",
+        "positionValue": "8170.310232",
+        "marginUsed": "827.820844",
+        "entryPx": "0.97248",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "0.9209666354"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0023",
+      "recordedAt": "2026-10-18T22:15:53.954Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "kPEPE",
+      "input": {
+        "szi": "-280853.0",
+        "positionValue": "1104.875702",
+        "marginUsed": "110.222039",
+        "entryPx": "0.003932",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "0.0041204329"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    },
+    {
+      "id": "hl-iso-0024",
+      "recordedAt": "2026-10-18T22:15:53.954Z",
+      "source": {
+        "calls": [
+          "metaAndAssetCtxs",
+          "clearinghouseState"
+        ]
+      },
+      "coin": "CRV",
+      "input": {
+        "szi": "-10167.7",
+        "positionValue": "3482.538927",
+        "marginUsed": "360.314457",
+        "entryPx": "0.34358",
+        "maxLeverage": 10,
+        "marginTable": [
+          {
+            "lowerBound": "0.0",
+            "maxLeverage": 10
+          },
+          {
+            "lowerBound": "20000000.0",
+            "maxLeverage": 5
+          }
+        ]
+      },
+      "expected": {
+        "liquidationPx": "0.3599496804"
+      },
+      "tolerance": {
+        "relative": 0.000001,
+        "absolute": 1e-10
+      }
+    }
+  ]
+}

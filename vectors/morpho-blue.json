@@ -1,0 +1,219 @@
+{
+  "schema": 1,
+  "venue": "morpho-blue",
+  "model": "standard",
+  "recordedWith": "scripts/record-morpho.ts",
+  "description": "Morpho Blue on Ethereum (0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb). Inputs are on-chain reads at the recorded block; the expected health factor is the value Morpho's public API reported for the position in the same run.",
+  "cases": [
+    {
+      "id": "morpho-eth-0001",
+      "recordedAt": "2026-10-18T22:15:11.000Z",
+      "block": 26222372,
+      "source": {
+        "calls": [
+          "api.morpho.org marketPositions.healthFactor",
+          "Morpho.idToMarketParams",
+          "Morpho.market",
+          "Morpho.position",
+          "Oracle.price",
+          "Irm.borrowRateView"
+        ]
+      },
+      "pair": "kBTC/RLUSD",
+      "input": {
+        "collateral": "250153202725",
+        "collateralDecimals": 8,
+        "loanDecimals": 18,
+        "borrowShares": "137556452975276153047079619906420",
+        "totalBorrowAssets": "212982603652524317197284529",
+        "totalBorrowShares": "209935874711286776841848922547989",
+        "oraclePrice": "813612611159810160807465477817178690698540175525981",
+        "lltv": "860000000000000000",
+        "borrowRate": "1090070820",
+        "lastUpdate": 1792331147,
+        "timestamp": 1792361711
+      },
+      "expected": {
+        "healthFactor": 1.254208007221988
+      },
+      "tolerance": {
+        "relative": 1e-05
+      }
+    },
+    {
+      "id": "morpho-eth-0002",
+      "recordedAt": "2026-10-18T22:15:11.000Z",
+      "block": 26222372,
+      "source": {
+        "calls": [
+          "api.morpho.org marketPositions.healthFactor",
+          "Morpho.idToMarketParams",
+          "Morpho.market",
+          "Morpho.position",
+          "Oracle.price",
+          "Irm.borrowRateView"
+        ]
+      },
+      "pair": "USDC/wARS",
+      "input": {
+        "collateral": "59483890297",
+        "collateralDecimals": 6,
+        "loanDecimals": 18,
+        "borrowShares": "61633326690315064404774728328721",
+        "totalBorrowAssets": "65006938230305349391993521",
+        "totalBorrowShares": "62417385406274195542686694713710",
+        "oraclePrice": "1625369795171334000000000000000000000000000000000000",
+        "lltv": "770000000000000000",
+        "borrowRate": "4473956024",
+        "lastUpdate": 1792245155,
+        "timestamp": 1792361711
+      },
+      "expected": {
+        "healthFactor": 1.1591701344793524
+      },
+      "tolerance": {
+        "relative": 1e-05
+      }
+    },
+    {
+      "id": "morpho-eth-0003",
+      "recordedAt": "2026-10-18T22:15:11.000Z",
+      "block": 26222372,
+      "source": {
+        "calls": [
+          "api.morpho.org marketPositions.healthFactor",
+          "Morpho.idToMarketParams",
+          "Morpho.market",
+          "Morpho.position",
+          "Oracle.price",
+          "Irm.borrowRateView"
+        ]
+      },
+      "pair": "weETH/RLUSD",
+      "input": {
+        "collateral": "19071987940870157851061",
+        "collateralDecimals": 18,
+        "loanDecimals": 18,
+        "borrowShares": "33636729705275913795993219774828",
+        "totalBorrowAssets": "88777948322251710013169428",
+        "totalBorrowShares": "86922995045778856515748551626683",
+        "oraclePrice": "2638671396875217916413184175939228066044",
+        "lltv": "860000000000000000",
+        "borrowRate": "1305090053",
+        "lastUpdate": 1792352747,
+        "timestamp": 1792361711
+      },
+      "expected": {
+        "healthFactor": 1.2597685890005133
+      },
+      "tolerance": {
+        "relative": 1e-05
+      }
+    },
+    {
+      "id": "morpho-eth-0004",
+      "recordedAt": "2026-10-18T22:15:11.000Z",
+      "block": 26222372,
+      "source": {
+        "calls": [
+          "api.morpho.org marketPositions.healthFactor",
+          "Morpho.idToMarketParams",
+          "Morpho.market",
+          "Morpho.position",
+          "Oracle.price",
+          "Irm.borrowRateView"
+        ]
+      },
+      "pair": "USDe/RLUSD",
+      "input": {
+        "collateral": "22331788957711349507779067",
+        "collateralDecimals": 18,
+        "loanDecimals": 18,
+        "borrowShares": "19350087420552294100118456469030",
+        "totalBorrowAssets": "54110675798299819954456417",
+        "totalBorrowShares": "53962973333858581094739975968636",
+        "oraclePrice": "999722185913354785448893953230052014",
+        "lltv": "915000000000000000",
+        "borrowRate": "2102661302",
+        "lastUpdate": 1792334411,
+        "timestamp": 1792361711
+      },
+      "expected": {
+        "healthFactor": 1.0527603237179421
+      },
+      "tolerance": {
+        "relative": 1e-05
+      }
+    },
+    {
+      "id": "morpho-eth-0005",
+      "recordedAt": "2026-10-18T22:15:11.000Z",
+      "block": 26222372,
+      "source": {
+        "calls": [
+          "api.morpho.org marketPositions.healthFactor",
+          "Morpho.idToMarketParams",
+          "Morpho.market",
+          "Morpho.position",
+          "Oracle.price",
+          "Irm.borrowRateView"
+        ]
+      },
+      "pair": "WBTC/RLUSD",
+      "input": {
+        "collateral": "28229191132",
+        "collateralDecimals": 8,
+        "loanDecimals": 18,
+        "borrowShares": "16084958421284971376195560977496",
+        "totalBorrowAssets": "21383308271075171139236457",
+        "totalBorrowShares": "21066510045299495718436130448055",
+        "oraclePrice": "812001658189713736689066696171100676890957065978440",
+        "lltv": "860000000000000000",
+        "borrowRate": "730223523",
+        "lastUpdate": 1792348751,
+        "timestamp": 1792361711
+      },
+      "expected": {
+        "healthFactor": 1.2073901628897505
+      },
+      "tolerance": {
+        "relative": 1e-05
+      }
+    },
+    {
+      "id": "morpho-eth-0006",
+      "recordedAt": "2026-10-18T22:15:11.000Z",
+      "block": 26222372,
+      "source": {
+        "calls": [
+          "api.morpho.org marketPositions.healthFactor",
+          "Morpho.idToMarketParams",
+          "Morpho.market",
+          "Morpho.position",
+          "Oracle.price",
+          "Irm.borrowRateView"
+        ]
+      },
+      "pair": "sUSDS/wARS",
+      "input": {
+        "collateral": "17980886397795639315093",
+        "collateralDecimals": 18,
+        "loanDecimals": 18,
+        "borrowShares": "13568000288370527143582542352052",
+        "totalBorrowAssets": "14010661542748475735668102",
+        "totalBorrowShares": "13569000288370527143582542352052",
+        "oraclePrice": "1809733209170495547724538644069476000000",
+        "lltv": "625000000000000000",
+        "borrowRate": "748218573",
+        "lastUpdate": 1792245155,
+        "timestamp": 1792361711
+      },
+      "expected": {
+        "healthFactor": 1.4515811843271864
+      },
+      "tolerance": {
+        "relative": 1e-05
+      }
+    }
+  ]
+}

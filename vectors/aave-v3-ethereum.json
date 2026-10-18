@@ -1,0 +1,241 @@
+{
+  "schema": 1,
+  "venue": "aave-v3",
+  "model": "standard",
+  "recordedWith": "scripts/record-aave.ts",
+  "description": "Aave V3 Ethereum (Pool 0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2), standard mode, one collateral and one debt reserve. Expected values are getUserAccountData at the recorded block: totalCollateralBase in base currency units, healthFactor scaled by 1e18.",
+  "cases": [
+    {
+      "id": "aave-eth-0001",
+      "recordedAt": "2026-10-18T22:12:47.000Z",
+      "block": 26222360,
+      "source": {
+        "calls": [
+          "Pool.getUserAccountData",
+          "PoolDataProvider.getReserveConfigurationData",
+          "PoolDataProvider.getUserReserveData",
+          "AaveOracle.getAssetPrice"
+        ]
+      },
+      "pair": "wstETH/USDC",
+      "input": {
+        "collateralBalance": "8564612326627076198",
+        "collateralDecimals": 18,
+        "collateralPrice": "297634973646",
+        "baseCurrencyUnit": "100000000",
+        "liquidationThreshold": "8100",
+        "totalDebtBase": "559973097284"
+      },
+      "expected": {
+        "totalCollateralBase": "2549128164123",
+        "healthFactor": "3687308949223384312"
+      },
+      "tolerance": {
+        "relative": 1e-9
+      }
+    },
+    {
+      "id": "aave-eth-0002",
+      "recordedAt": "2026-10-18T22:12:47.000Z",
+      "block": 26222360,
+      "source": {
+        "calls": [
+          "Pool.getUserAccountData",
+          "PoolDataProvider.getReserveConfigurationData",
+          "PoolDataProvider.getUserReserveData",
+          "AaveOracle.getAssetPrice"
+        ]
+      },
+      "pair": "wstETH/USDT",
+      "input": {
+        "collateralBalance": "91085960002222310",
+        "collateralDecimals": 18,
+        "collateralPrice": "297634973646",
+        "baseCurrencyUnit": "100000000",
+        "liquidationThreshold": "8100",
+        "totalDebtBase": "13482267677"
+      },
+      "expected": {
+        "totalCollateralBase": "27110367304",
+        "healthFactor": "1628761425179349671"
+      },
+      "tolerance": {
+        "relative": 1e-9
+      }
+    },
+    {
+      "id": "aave-eth-0003",
+      "recordedAt": "2026-10-18T22:12:47.000Z",
+      "block": 26222360,
+      "source": {
+        "calls": [
+          "Pool.getUserAccountData",
+          "PoolDataProvider.getReserveConfigurationData",
+          "PoolDataProvider.getUserReserveData",
+          "AaveOracle.getAssetPrice"
+        ]
+      },
+      "pair": "WETH/USDC",
+      "input": {
+        "collateralBalance": "2516833368232149151000",
+        "collateralDecimals": 18,
+        "collateralPrice": "238753550598",
+        "baseCurrencyUnit": "100000000",
+        "liquidationThreshold": "8300",
+        "totalDebtBase": "301086239114916"
+      },
+      "expected": {
+        "totalCollateralBase": "600902902928949",
+        "healthFactor": "1656500180470450844"
+      },
+      "tolerance": {
+        "relative": 1e-9
+      }
+    },
+    {
+      "id": "aave-eth-0004",
+      "recordedAt": "2026-10-18T22:12:47.000Z",
+      "block": 26222360,
+      "source": {
+        "calls": [
+          "Pool.getUserAccountData",
+          "PoolDataProvider.getReserveConfigurationData",
+          "PoolDataProvider.getUserReserveData",
+          "AaveOracle.getAssetPrice"
+        ]
+      },
+      "pair": "USDC/WETH",
+      "input": {
+        "collateralBalance": "80186677",
+        "collateralDecimals": 6,
+        "collateralPrice": "99988399",
+        "baseCurrencyUnit": "100000000",
+        "liquidationThreshold": "7800",
+        "totalDebtBase": "4816134244"
+      },
+      "expected": {
+        "totalCollateralBase": "8017737454",
+        "healthFactor": "1298517627890274397"
+      },
+      "tolerance": {
+        "relative": 1e-9
+      }
+    },
+    {
+      "id": "aave-eth-0005",
+      "recordedAt": "2026-10-18T22:12:47.000Z",
+      "block": 26222360,
+      "source": {
+        "calls": [
+          "Pool.getUserAccountData",
+          "PoolDataProvider.getReserveConfigurationData",
+          "PoolDataProvider.getUserReserveData",
+          "AaveOracle.getAssetPrice"
+        ]
+      },
+      "pair": "USDC/WETH",
+      "input": {
+        "collateralBalance": "770973329",
+        "collateralDecimals": 6,
+        "collateralPrice": "99988399",
+        "baseCurrencyUnit": "100000000",
+        "liquidationThreshold": "7800",
+        "totalDebtBase": "39203985386"
+      },
+      "expected": {
+        "totalCollateralBase": "77088388838",
+        "healthFactor": "1533745681762049619"
+      },
+      "tolerance": {
+        "relative": 1e-9
+      }
+    },
+    {
+      "id": "aave-eth-0006",
+      "recordedAt": "2026-10-18T22:12:47.000Z",
+      "block": 26222360,
+      "source": {
+        "calls": [
+          "Pool.getUserAccountData",
+          "PoolDataProvider.getReserveConfigurationData",
+          "PoolDataProvider.getUserReserveData",
+          "AaveOracle.getAssetPrice"
+        ]
+      },
+      "pair": "AAVE/USDC",
+      "input": {
+        "collateralBalance": "34188464910942247706",
+        "collateralDecimals": 18,
+        "collateralPrice": "14933100000",
+        "baseCurrencyUnit": "100000000",
+        "liquidationThreshold": "7600",
+        "totalDebtBase": "227935882291"
+      },
+      "expected": {
+        "totalCollateralBase": "510539765361",
+        "healthFactor": "1702277929101996861"
+      },
+      "tolerance": {
+        "relative": 1e-9
+      }
+    },
+    {
+      "id": "aave-eth-0007",
+      "recordedAt": "2026-10-18T22:12:47.000Z",
+      "block": 26222360,
+      "source": {
+        "calls": [
+          "Pool.getUserAccountData",
+          "PoolDataProvider.getReserveConfigurationData",
+          "PoolDataProvider.getUserReserveData",
+          "AaveOracle.getAssetPrice"
+        ]
+      },
+      "pair": "WETH/USDT",
+      "input": {
+        "collateralBalance": "265069533912048405422",
+        "collateralDecimals": 18,
+        "collateralPrice": "238753550598",
+        "baseCurrencyUnit": "100000000",
+        "liquidationThreshold": "8300",
+        "totalDebtBase": "33749275295781"
+      },
+      "expected": {
+        "totalCollateralBase": "63286292376858",
+        "healthFactor": "1556407425416883630"
+      },
+      "tolerance": {
+        "relative": 1e-9
+      }
+    },
+    {
+      "id": "aave-eth-0008",
+      "recordedAt": "2026-10-18T22:12:47.000Z",
+      "block": 26222360,
+      "source": {
+        "calls": [
+          "Pool.getUserAccountData",
+          "PoolDataProvider.getReserveConfigurationData",
+          "PoolDataProvider.getUserReserveData",
+          "AaveOracle.getAssetPrice"
+        ]
+      },
+      "pair": "WETH/USDT",
+      "input": {
+        "collateralBalance": "27012056389980777722",
+        "collateralDecimals": 18,
+        "collateralPrice": "238753550598",
+        "baseCurrencyUnit": "100000000",
+        "liquidationThreshold": "8300",
+        "totalDebtBase": "4092042037391"
+      },
+      "expected": {
+        "totalCollateralBase": "6449224372061",
+        "healthFactor": "1308113694800530111"
+      },
+      "tolerance": {
+        "relative": 1e-9
+      }
+    }
+  ]
+}
